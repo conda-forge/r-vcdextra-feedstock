@@ -1,5 +1,4 @@
 {% set version = '0.7-1' %}
-
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,12 +9,13 @@ package:
 source:
   fn: vcdExtra_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/vcdExtra_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/vcdExtra/vcdExtra_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/vcdExtra_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/vcdExtra/vcdExtra_{{ version }}.tar.gz
   sha256: 0cac977f412e84c5f2625a14e381df7a98498108ebbcc816ceb53db8214c7d98
 
 build:
-  number: 0
+  merge_build_host: True  # [win]
+  number: 1
   skip: true  # [win32]
   rpaths:
     - lib/R/lib/
@@ -23,12 +23,13 @@ build:
 
 requirements:
   build:
+    - {{posix}}zip               # [win]
+  host:
     - r-base
     - r-mass
     - r-ca
     - r-gnm >=1.0.3
     - r-vcd
-
   run:
     - r-base
     - r-mass
@@ -38,7 +39,7 @@ requirements:
 
 test:
   commands:
-    - $R -e "library('vcdExtra')"  # [not win]
+    - $R -e "library('vcdExtra')"           # [not win]
     - "\"%R%\" -e \"library('vcdExtra')\""  # [win]
 
 about:
@@ -62,3 +63,4 @@ extra:
     - daler
     - jdblischak
     - cbrueffer
+    - dbast
