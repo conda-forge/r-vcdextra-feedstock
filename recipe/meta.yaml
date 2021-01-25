@@ -1,4 +1,4 @@
-{% set version = '0.7-1' %}
+{% set version = "0.7-5" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -11,12 +11,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/vcdExtra_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/vcdExtra/vcdExtra_{{ version }}.tar.gz
-  sha256: 0cac977f412e84c5f2625a14e381df7a98498108ebbcc816ceb53db8214c7d98
+  sha256: ad766bf7cb2fc09290b86218cf8552ceac24e98c7ca52bbeff3e12fe6a170239
 
 build:
   noarch: generic
-  merge_build_host: True  # [win]
-  number: 1003
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -45,15 +45,10 @@ test:
 about:
   home: https://CRAN.R-project.org/package=vcdExtra
   license: GPL (>= 2)
-  summary: Provides additional data sets, methods and documentation to complement the 'vcd' package
-    for Visualizing Categorical Data and the 'gnm' package for Generalized Nonlinear
-    Models. In particular, 'vcdExtra' extends mosaic, assoc and sieve plots from 'vcd'
-    to handle 'glm()' and 'gnm()' models and adds a 3D version in 'mosaic3d'.  Additionally,
-    methods are provided for comparing and visualizing lists of 'glm' and 'loglm' objects.
-    This package is now a support package for the book, "Discrete Data Analysis with
-    R" by Michael Friendly and David Meyer.
+  summary: Provides additional data sets, methods and documentation to complement the 'vcd' package for Visualizing Categorical Data and the 'gnm' package for Generalized Nonlinear Models. In particular, 'vcdExtra' extends mosaic, assoc and sieve plots from 'vcd' to handle 'glm()' and 'gnm()' models and adds a 3D version
+    in 'mosaic3d'.  Additionally, methods are provided for comparing and visualizing lists of 'glm' and 'loglm' objects. This package is now a support package for the book, "Discrete Data Analysis with R" by Michael Friendly and David Meyer.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
