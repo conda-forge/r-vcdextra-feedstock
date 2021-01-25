@@ -5,11 +5,9 @@ Home: https://CRAN.R-project.org/package=vcdExtra
 
 Package license: GPL (>= 2)
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-vcdextra-feedstock/blob/master/LICENSE.txt)
 
 Summary: Provides additional data sets, methods and documentation to complement the 'vcd' package for Visualizing Categorical Data and the 'gnm' package for Generalized Nonlinear Models. In particular, 'vcdExtra' extends mosaic, assoc and sieve plots from 'vcd' to handle 'glm()' and 'gnm()' models and adds a 3D version in 'mosaic3d'.  Additionally, methods are provided for comparing and visualizing lists of 'glm' and 'loglm' objects. This package is now a support package for the book, "Discrete Data Analysis with R" by Michael Friendly and David Meyer.
-
-
 
 Current build status
 ====================
