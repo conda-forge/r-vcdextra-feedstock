@@ -29,6 +29,7 @@ requirements:
     - r-gnm >=1.0_3
     - r-rgl
     - r-vcd
+    - libgl-devel                   # [linux]
   run:
     - r-base
     - r-mass
