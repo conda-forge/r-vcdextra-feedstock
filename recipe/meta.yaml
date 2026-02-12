@@ -24,17 +24,23 @@ requirements:
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
+    - r-dplyr
+    - r-gt
     - r-mass
     - r-ca
     - r-gnm >=1.0_3
     - r-rgl
+    - r-scales
     - r-vcd
   run:
     - r-base
+    - r-dplyr
+    - r-gt
     - r-mass
     - r-ca
     - r-gnm >=1.0_3
     - r-rgl
+    - r-scales
     - r-vcd
 
 test:
