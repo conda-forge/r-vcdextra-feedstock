@@ -1,4 +1,4 @@
-{% set version = "0.9.0" %}
+{% set version = "0.9.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/vcdExtra_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/vcdExtra/vcdExtra_{{ version }}.tar.gz
-  sha256: 36352c311c8e56982a48e9ab5a928dec45442ca2884b131b870df2dcb5c093c1
+  sha256: 89603c791e60be071db153ce9c8ac3a5e6744e614d4a3f17f2285626076dc720
 
 build:
   noarch: generic
@@ -24,17 +24,23 @@ requirements:
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
+    - r-dplyr
+    - r-gt
     - r-mass
     - r-ca
     - r-gnm >=1.0_3
     - r-rgl
+    - r-scales
     - r-vcd
   run:
     - r-base
+    - r-dplyr
+    - r-gt
     - r-mass
     - r-ca
     - r-gnm >=1.0_3
     - r-rgl
+    - r-scales
     - r-vcd
 
 test:
@@ -46,8 +52,8 @@ about:
   home: https://friendly.github.io/vcdExtra/
   dev_url: https://github.com/friendly/vcdExtra
   license: GPL-2.0-or-later
-  summary: Provides additional data sets, methods and documentation to complement the 'vcd' package for Visualizing Categorical Data and the 'gnm' package for Generalized Nonlinear Models. In particular, 'vcdExtra' extends mosaic, assoc and sieve plots from 'vcd' to handle 'glm()' and 'gnm()' models and adds a 3D version
-    in 'mosaic3d'.  Additionally, methods are provided for comparing and visualizing lists of 'glm' and 'loglm' objects. This package is now a support package for the book, "Discrete Data Analysis with R" by Michael Friendly and David Meyer.
+  summary: Provides additional data sets, methods and documentation to complement the 'vcd' package for Visualizing Categorical Data and the 'gnm' package for Generalized Nonlinear Models. In particular, 'vcdExtra' extends mosaic, assoc and sieve plots from 'vcd' to handle 'glm()' and 'gnm()' models and adds a 3D 
+    version in 'mosaic3d'.  Additionally, methods are provided for comparing and visualizing lists of 'glm' and 'loglm' objects. This package is now a support package for the book, "Discrete Data Analysis with R" by Michael Friendly and David Meyer.
   license_family: GPL3
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
