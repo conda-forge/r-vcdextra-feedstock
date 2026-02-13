@@ -17,6 +17,10 @@ build:
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
@@ -26,15 +30,23 @@ requirements:
     - r-base
     - r-mass
     - r-ca
+    - r-colorspace
+    - r-dplyr
     - r-gnm >=1.0_3
+    - r-gt
     - r-rgl
+    - r-scales
     - r-vcd
   run:
     - r-base
     - r-mass
     - r-ca
+    - r-colorspace
+    - r-dplyr
     - r-gnm >=1.0_3
+    - r-gt
     - r-rgl
+    - r-scales
     - r-vcd
 
 test:
