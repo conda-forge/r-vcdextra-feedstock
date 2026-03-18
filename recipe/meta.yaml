@@ -12,8 +12,8 @@ source:
   sha256: 9e7110df0f46ae462e14c334f16e439faaa9a0c19796f75ee863e8cbce27e71c
 
 build:
-  noarch: generic
   number: 0
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
@@ -28,30 +28,32 @@ requirements:
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-    - r-dplyr
-    - r-gt
     - r-mass
     - r-ca
     - r-colorspace
     - r-dplyr
     - r-gnm >=1.0_3
     - r-gt
-    - r-rgl
+    - r-htmlwidgets
+    - r-igraph
+    - r-knitr
     - r-scales
     - r-vcd
+    - r-webshot2
   run:
     - r-base
-    - r-dplyr
-    - r-gt
     - r-mass
     - r-ca
     - r-colorspace
     - r-dplyr
     - r-gnm >=1.0_3
     - r-gt
-    - r-rgl
+    - r-htmlwidgets
+    - r-igraph
+    - r-knitr
     - r-scales
     - r-vcd
+    - r-webshot2
 
 test:
   commands:
