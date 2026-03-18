@@ -1,4 +1,4 @@
-{% set version = "0.9.1" %}
+{% set version = "0.9.3" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/vcdExtra_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/vcdExtra/vcdExtra_{{ version }}.tar.gz
-  sha256: 89603c791e60be071db153ce9c8ac3a5e6744e614d4a3f17f2285626076dc720
+  sha256: 9e7110df0f46ae462e14c334f16e439faaa9a0c19796f75ee863e8cbce27e71c
 
 build:
   noarch: generic
