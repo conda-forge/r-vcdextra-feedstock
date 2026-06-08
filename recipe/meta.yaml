@@ -32,11 +32,13 @@ requirements:
     - r-ca
     - r-colorspace
     - r-dplyr
+    - r-forcats
     - r-gnm >=1.0_3
     - r-gt
     - r-htmlwidgets
     - r-igraph
     - r-knitr
+    - r-rlang
     - r-scales
     - r-vcd
     - r-webshot2
@@ -46,11 +48,13 @@ requirements:
     - r-ca
     - r-colorspace
     - r-dplyr
+    - r-forcats
     - r-gnm >=1.0_3
     - r-gt
     - r-htmlwidgets
     - r-igraph
     - r-knitr
+    - r-rlang
     - r-scales
     - r-vcd
     - r-webshot2
