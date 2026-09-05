@@ -33,6 +33,7 @@ requirements:
     - r-colorspace
     - r-dplyr
     - r-forcats
+    - r-ggplot2 >=3.4.0
     - r-gnm >=1.0_3
     - r-gt
     - r-htmlwidgets
@@ -49,6 +50,7 @@ requirements:
     - r-colorspace
     - r-dplyr
     - r-forcats
+    - r-ggplot2 >=3.4.0
     - r-gnm >=1.0_3
     - r-gt
     - r-htmlwidgets
